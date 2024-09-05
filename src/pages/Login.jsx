@@ -1,14 +1,44 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import chair from "../assets/beautifull-chair.jpg";
 import logo from "../assets/furni.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { UserContext } from "../provider/userProvider";
+import toast from "react-hot-toast";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [termsAgreed, setTermsAgreed] = useState(false);
+  const navigate = useNavigate();
+
+  const { login } = useContext(UserContext);
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
+  };
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    if (!termsAgreed) {
+      setError("You must agree to the terms and conditions.");
+      return;
+    }
+
+    setLoading(true);
+    setError(null);
+
+    setTimeout(() => {
+      const userData = { email, password };
+      login(userData);
+
+      setLoading(false);
+      toast.success("Login Successfull");
+      navigate("/");
+    }, 2000);
   };
   return (
     <div className="p-5 md:flex justify-center items-center gap-5 w-full">
@@ -19,52 +49,67 @@ const Login = () => {
             Enter your Credentials to access your account
           </p>
 
-          <div className="flex flex-col space-y-3">
-            <div className="relative">
-              <input
-                className="p-3 outline-none rounded peer w-full border-2 border-gray-300"
-                type="email"
-                placeholder=" "
-                id="email"
-              />
-              <label
-                htmlFor="email"
-                className="absolute text-sm left-3 top-0 text-gray-500 transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:left-3 peer-placeholder-shown:text-gray-400 peer-focus:top-0 peer-focus:left-3 peer-focus:text-gray-500"
-              >
-                Email address
-              </label>
-            </div>
-            <div className="relative">
-              <input
-                className="p-3 outline-none rounded peer w-full border-2 border-gray-300"
-                type={showPassword ? "text" : "password"}
-                placeholder=" "
-                id="password"
-              />
-              <label
-                htmlFor="password"
-                className="absolute text-sm left-3 top-0 text-gray-500 transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:left-3 peer-placeholder-shown:text-gray-400 peer-focus:top-0 peer-focus:left-3 peer-focus:text-gray-500"
-              >
-                Password
-              </label>
-              <div
-                className="absolute right-3 top-3 cursor-pointer"
-                onClick={togglePasswordVisibility}
-              >
-                {showPassword ? <FaEyeSlash /> : <FaEye />}
+          <form onSubmit={handleLogin}>
+            <div className="flex flex-col space-y-3">
+              <div className="relative">
+                <input
+                  className="p-3 outline-none rounded peer w-full border-2 border-gray-300"
+                  type="email"
+                  placeholder=" "
+                  id="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+                <label
+                  htmlFor="email"
+                  className="absolute text-sm left-3 top-0 text-gray-500 transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:left-3 peer-placeholder-shown:text-gray-400 peer-focus:top-0 peer-focus:left-3 peer-focus:text-gray-500"
+                >
+                  Email address
+                </label>
               </div>
+              <div className="relative">
+                <input
+                  className="p-3 outline-none rounded peer w-full border-2 border-gray-300"
+                  type={showPassword ? "text" : "password"}
+                  placeholder=" "
+                  id="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+                <label
+                  htmlFor="password"
+                  className="absolute text-sm left-3 top-0 text-gray-500 transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:left-3 peer-placeholder-shown:text-gray-400 peer-focus:top-0 peer-focus:left-3 peer-focus:text-gray-500"
+                >
+                  Password
+                </label>
+                <div
+                  className="absolute right-3 top-3 cursor-pointer"
+                  onClick={togglePasswordVisibility}
+                >
+                  {showPassword ? <FaEyeSlash /> : <FaEye />}
+                </div>
+              </div>
+              <div className="text-left font-medium my-2">
+                <input
+                  className="mr-2"
+                  type="checkbox"
+                  id="termsCheckbox"
+                  checked={termsAgreed}
+                  onChange={() => setTermsAgreed(!termsAgreed)}
+                />
+                <label htmlFor="termsCheckbox">
+                  I agree to the Terms & Policy
+                </label>
+              </div>
+              {error && <p className="text-red-500">{error}</p>}
+              <button
+                disabled={loading || !termsAgreed}
+                className="p-3 rounded bg-black text-white font-medium"
+              >
+                {loading ? "Signing in..." : "Signin"}
+              </button>
             </div>
-            <div className="text-left font-medium my-2">
-              <input className="mr-2" type="checkbox" id="termsCheckbox" />
-              <label htmlFor="termsCheckbox">
-                I agree to the Terms & Policy
-              </label>
-            </div>
-
-            <button className="p-3 rounded bg-black text-white font-medium">
-              Signup
-            </button>
-          </div>
+          </form>
           <div className="flex items-center space-x-2 my-5">
             <hr className="w-full bg-slate-300 h-[.10rem]" />
             <p>or</p>

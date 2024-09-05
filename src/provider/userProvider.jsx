@@ -1,5 +1,6 @@
 // UserContext.js
 import { createContext, useState, useEffect } from "react";
+import toast from "react-hot-toast";
 
 export const UserContext = createContext();
 
@@ -7,7 +8,7 @@ export const UserProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    const storedUser = JSON.parse(localStorage.getItem("user"));
+    const storedUser = JSON.parse(localStorage.getItem("userData"));
     if (storedUser) setUser(storedUser);
   }, []);
 
@@ -19,6 +20,7 @@ export const UserProvider = ({ children }) => {
   const logout = () => {
     setUser(null);
     localStorage.removeItem("user");
+    toast.success("logout success");
   };
 
   return (
