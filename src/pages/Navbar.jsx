@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import image from "../assets/furniture.jpg";
+import image from "../assets/furni.png";
 
 const Navbar = () => {
   const navMenu = (
@@ -79,11 +79,7 @@ const Navbar = () => {
               {navMenu}
             </ul>
           </div>
-          <img
-            className="w-[15%] rounded-full bg-blue-500"
-            src={image}
-            alt="furniture"
-          />
+          <img className="w-[10%] rounded-full" src={image} alt="logo" />
           <h1 className="text-xl md:text-3xl font-bold">
             Furni<span className="text-blue-500">Flex</span>
           </h1>

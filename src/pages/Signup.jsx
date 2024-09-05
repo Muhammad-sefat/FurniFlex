@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import chair from "../assets/beautifull-chair.jpg";
+import logo from "../assets/furni.png";
 import { Link } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
@@ -132,7 +133,7 @@ const Signup = () => {
             </button>
           </div>
           <p className="my-5">
-            Have an Account ? please{" "}
+            Already Have an Account ? please{" "}
             <Link to={"/login"}>
               <span className="font-semibold underline">Login</span>
             </Link>
@@ -146,6 +147,7 @@ const Signup = () => {
         }}
       >
         <div className="relative z-10 text-center p-6">
+          <img className="w-[10%] mx-auto" src={logo} alt="" />
           <h1 className="text-xl md:text-4xl font-bold text-white">
             Furni<span className="text-blue-500">Flex</span>
           </h1>
