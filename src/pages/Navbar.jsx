@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import image from "../assets/furniture.jpg";
 
 const Navbar = () => {
@@ -122,7 +122,8 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
-            <div className="dropdown dropdown-end">
+            <Link to={"/login"}>Login</Link>
+            {/* <div className="dropdown dropdown-end">
               <div
                 tabIndex={0}
                 role="button"
@@ -135,7 +136,15 @@ const Navbar = () => {
                   />
                 </div>
               </div>
-            </div>
+              <ul
+                tabIndex={0}
+                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-28 p-2 shadow"
+              >
+                <li>
+                  <a>Logout</a>
+                </li>
+              </ul>
+            </div> */}
           </div>
         </div>
       </div>
