@@ -6,6 +6,14 @@ export const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    fetch("/public/data/product.json")
+      .then((response) => response.json())
+      .then((data) => setProducts(data))
+      .catch((error) => console.error("Error fetching products:", error));
+  }, []);
 
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem("userData"));
@@ -24,7 +32,7 @@ export const UserProvider = ({ children }) => {
   };
 
   return (
-    <UserContext.Provider value={{ user, login, logout }}>
+    <UserContext.Provider value={{ user, login, logout, products }}>
       {children}
     </UserContext.Provider>
   );
