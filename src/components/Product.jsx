@@ -42,7 +42,7 @@ const Product = () => {
   return (
     <div>
       <div className="md:flex gap-5">
-        <div className="w-[15%] border-r-2 text-left  space-y-2 mt-5">
+        <div className="md:w-[15%] border-r-2 text-left  space-y-2 mt-5">
           <p
             className={`cursor-pointer ${
               activeCategory === "All"

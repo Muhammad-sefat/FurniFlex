@@ -54,7 +54,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="border-b-2">
+    <div className="border-b-2 z-50 relative">
       <div className="navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
@@ -82,7 +82,11 @@ const Navbar = () => {
             </ul>
           </div>
 
-          <img className="w-[10%] rounded-full" src={image} alt="logo" />
+          <img
+            className="w-[20%] md:w-[10%] rounded-full"
+            src={image}
+            alt="logo"
+          />
           <h1 className="text-xl md:text-3xl font-bold">
             Furni<span className="text-blue-500">Flex</span>
           </h1>
