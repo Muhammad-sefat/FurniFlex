@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "name": "Modern Rocking Chair",
+    "image": "https://i.ibb.co/8xkTwjH/closeup-comfortable-loft-style-chair-with-armrests.jpg",
+    "price": 150,
+    "description": "A sleek and modern rocking chair made from premium wood.",
+    "category": "Rocking Chair"
+  },
+  {
+    "id": 2,
+    "name": "Classic Side Chair",
+    "image": "https://i.ibb.co/XySKFdT/grant-durr-Wy52nx-Bf-7-Q-unsplash.jpg",
+    "price": 85,
+    "description": "A traditional side chair with an elegant design.",
+    "category": "Side Chair"
+  },
+  {
+    "id": 3,
+    "name": "Comfort Lounge Chair",
+    "image": "https://i.ibb.co/M9tXywR/john-schaidler-z-Dx5-Txqf-Lo-Q-unsplash.jpg",
+    "price": 200,
+    "description": "A plush lounge chair designed for maximum comfort.",
+    "category": "Lounge Chair"
+  },
+  {
+    "id": 4,
+    "name": "Rustic Rocking Chair",
+    "image": "https://i.ibb.co/7XH4RYq/clark-gu-Ni-SDU-6-Vf1-Y-unsplash-1.jpg",
+    "price": 170,
+    "description": "A rustic-style rocking chair, perfect for cozy corners.",
+    "category": "Rocking Chair"
+  },
+  {
+    "id": 5,
+    "name": "Contemporary Side Chair",
+    "image": "https://i.ibb.co/YhB2tzZ/andres-jasso-ssbgw3c-Kd-Xg-unsplash.jpg",
+    "price": 95,
+    "description": "A contemporary side chair with minimalistic design.",
+    "category": "Side Chair"
+  },
+  {
+    "id": 6,
+    "name": "Luxury Lounge Chair",
+    "image": "https://i.ibb.co/PGjDTff/artsy-vibes-s-UWg-JBX4i0-U-unsplash.jpg",
+    "price": 250,
+    "description": "A luxury lounge chair with leather upholstery.",
+    "category": "Lounge Chair"
+  },
+  {
+    "id": 7,
+    "name": "Ergonomic Rocking Chair",
+    "image": "https://i.ibb.co/pW6QxhD/closeup-simple-modern-chair-with-metallic-legs-room-with-gray-walls.jpg",
+    "price": 180,
+    "description": "An ergonomic rocking chair designed for back support.",
+    "category": "Rocking Chair"
+  },
+  {
+    "id": 8,
+    "name": "Vintage Side Chair",
+    "image": "https://i.ibb.co/16Dqz7Z/dan-gold-P-0-R02-Ard-LE-unsplash.jpg",
+    "price": 120,
+    "description": "A vintage side chair that adds a classic touch to any room.",
+    "category": "Side Chair"
+  },
+  {
+    "id": 9,
+    "name": "Cozy Lounge Chair",
+    "image": "https://i.ibb.co/TLGRF18/daniil-silantev-w-Laus9b-Lm-GQ-unsplash.jpg",
+    "price": 220,
+    "description": "A cozy lounge chair with soft fabric upholstery.",
+    "category": "Lounge Chair"
+  },
+  {
+    "id": 10,
+    "name": "Wooden Rocking Chair",
+    "image": "https://i.ibb.co/rFbVz06/dillon-mangum-9489s-Ffgk4c-unsplash.jpg",
+    "price": 165,
+    "description": "A beautifully crafted wooden rocking chair.",
+    "category": "Rocking Chair"
+  },
+  {
+    "id": 11,
+    "name": "Modern Side Chair",
+    "image": "https://i.ibb.co/McnV801/enrique-ortega-miranda-b3xo3-Wv-H-g8-unsplash.jpg",
+    "price": 110,
+    "description": "A modern side chair with metal legs and cushioned seat.",
+    "category": "Side Chair"
+  },
+  {
+    "id": 12,
+    "name": "Reclining Lounge Chair",
+    "image": "https://i.ibb.co/MDHJd9G/giorgio-trovato-4v-WUd2c9d40-unsplash.jpg",
+    "price": 300,
+    "description": "A reclining lounge chair for ultimate relaxation.",
+    "category": "Lounge Chair"
+  },
+  {
+    "id": 13,
+    "name": "Minimalist Rocking Chair",
+    "image": "https://i.ibb.co/8BGjV05/jamie-waynick-x-Vd9-Fu-Eby-M4-unsplash.jpg",
+    "price": 140,
+    "description": "A minimalist rocking chair with clean lines.",
+    "category": "Rocking Chair"
+  },
+  {
+    "id": 14,
+    "name": "Elegant Side Chair",
+    "image": "https://i.ibb.co/MBmZcpn/jorgen-larsen-k-Qtx4-FKBx-D0-unsplash.jpg",
+    "price": 130,
+    "description": "An elegant side chair with intricate design details.",
+    "category": "Side Chair"
+  },
+  {
+    "id": 15,
+    "name": "Outdoor Lounge Chair",
+    "image": "https://i.ibb.co/JKY0Rgy/kara-eads-buhmhprfo3g-unsplash.jpg",
+    "price": 260,
+    "description": "A weather-resistant lounge chair for outdoor relaxation.",
+    "category": "Lounge Chair"
+  },
+  {
+    "id": 16,
+    "name": "Retro Rocking Chair",
+    "image": "https://i.ibb.co/3ytqX8H/kunj-parekh-9w-GKENQ-q-TI-unsplash.jpg",
+    "price": 175,
+    "description": "A retro-style rocking chair with a unique design.",
+    "category": "Rocking Chair"
+  },
+  {
+    "id": 17,
+    "name": "Industrial Side Chair",
+    "image": "https://i.ibb.co/3vP08hG/marie-michele-bouchard-uxtw-Bo9l-S50-unsplash.jpg",
+    "price": 100,
+    "description": "An industrial side chair with a sturdy metal frame.",
+    "category": "Side Chair"
+  },
+  {
+    "id": 18,
+    "name": "Swivel Lounge Chair",
+    "image": "https://i.ibb.co/rwDpkCV/mitch-moondae-z-XFtsdi9d-Ic-unsplash-1.jpg",
+    "price": 310,
+    "description": "A lounge chair with a swivel base for added functionality.",
+    "category": "Lounge Chair"
+  },
+  {
+    "id": 19,
+    "name": "Classic Wooden Rocking Chair",
+    "image": "https://i.ibb.co/Sx18Rbr/pacific-office-interiors-k-Gs09-BE5o3s-unsplash.jpg",
+    "price": 160,
+    "description": "A classic wooden rocking chair for a timeless feel.",
+    "category": "Rocking Chair"
+  },
+  {
+    "id": 20,
+    "name": "Upholstered Side Chair",
+    "image": "https://i.ibb.co/hd3hhH1/rabie-madaci-4iw-G8-QD17-AE-unsplash.jpg",
+    "price": 115,
+    "description": "A side chair with plush upholstery for extra comfort.",
+    "category": "Side Chair"
+  },
+  {
+    "id": 21,
+    "name": "Modern Lounge Chair",
+    "image": "https://i.ibb.co/P6wNbw5/samuel-regan-asante-ky-B2m75-M6-M-unsplash.jpg",
+    "price": 280,
+    "description": "A modern lounge chair with a sleek, contemporary design.",
+    "category": "Lounge Chair"
+  },
+  {
+    "id": 22,
+    "name": "Rustic Wooden Rocking Chair",
+    "image": "https://i.ibb.co/P6wNbw5/samuel-regan-asante-ky-B2m75-M6-M-unsplash.jpg",
+    "price": 190,
+    "description": "A rustic wooden rocking chair perfect for porch seating.",
+    "category": "Rocking Chair"
+  },
+  {
+    "id": 23,
+    "name": "Mid-century Side Chair",
+    "image": "https://i.ibb.co/Jm2KzYy/yu-carla-Or3zn5zbgz-E-unsplash.jpg",
+    "price": 125,
+    "description": "A mid-century side chair that fits modern and retro spaces.",
+    "category": "Side Chair"
+  },
+  {
+    "id": 24,
+    "name": "Velvet Lounge Chair",
+    "image": "https://i.ibb.co/pW6QxhD/closeup-simple-modern-chair-with-metallic-legs-room-with-gray-walls.jpg",
+    "price": 350,
+    "description": "A luxurious velvet lounge chair for premium comfort.",
+    "category": "Lounge Chair"
+  },
+  {
+    "id": 25,
+    "name": "Traditional Rocking Chair",
+    "image": "https://i.ibb.co/7XH4RYq/clark-gu-Ni-SDU-6-Vf1-Y-unsplash-1.jpg",
+    "price": 155,
+    "description": "A traditional rocking chair with a timeless look.",
+    "category": "Rocking Chair"
+  },
+  {
+    "id": 26,
+    "name": "Scandinavian Side Chair",
+    "image": "https://via.placeholder.com/150",
+    "price": 105,
+    "description": "A Scandinavian-style side chair with a minimalist design.",
+    "category": "Side Chair"
+  },
+  {
+    "id": 27,
+    "name": "Oversized Lounge Chair",
+    "image": "https://i.ibb.co/YhB2tzZ/andres-jasso-ssbgw3c-Kd-Xg-unsplash.jpg",
+    "price": 320,
+    "description": "An oversized lounge chair with ample seating space.",
+    "category": "Lounge Chair"
+  },
+  {
+    "id": 28,
+    "name": "Lightweight Rocking Chair",
+    "image": "https://i.ibb.co/hd3hhH1/rabie-madaci-4iw-G8-QD17-AE-unsplash.jpg",
+    "price": 145,
+    "description": "A lightweight rocking chair, easy to move and durable.",
+    "category": "Rocking Chair"
+  },
+  {
+    "id": 29,
+    "name": "Accent Side Chair",
+    "image": "https://i.ibb.co/P6wNbw5/samuel-regan-asante-ky-B2m75-M6-M-unsplash.jpg",
+    "price": 135,
+    "description": "An accent side chair that adds color and style to any room.",
+    "category": "Side Chair"
+  },
+  {
+    "id": 30,
+    "name": "Recliner Lounge Chair",
+    "image": "https://i.ibb.co/Jm2KzYy/yu-carla-Or3zn5zbgz-E-unsplash.jpg",
+    "price": 330,
+    "description": "A recliner lounge chair with adjustable reclining angles.",
+    "category": "Lounge Chair"
+  }
+]
