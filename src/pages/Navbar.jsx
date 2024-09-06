@@ -4,7 +4,7 @@ import image from "../assets/furni.png";
 import { UserContext } from "../provider/userProvider";
 
 const Navbar = () => {
-  const { user, logout } = useContext(UserContext);
+  const { user, logout, cart } = useContext(UserContext);
   const navMenu = (
     <>
       <li>
@@ -81,6 +81,7 @@ const Navbar = () => {
               {navMenu}
             </ul>
           </div>
+
           <img className="w-[10%] rounded-full" src={image} alt="logo" />
           <h1 className="text-xl md:text-3xl font-bold">
             Furni<span className="text-blue-500">Flex</span>
@@ -93,7 +94,7 @@ const Navbar = () => {
         </div>
         <div className="navbar-end ">
           <div className="flex-none flex items-center gap-3">
-            <div className="dropdown dropdown-end">
+            <NavLink to={"/cart-page"} className="dropdown dropdown-end">
               <div
                 tabIndex={0}
                 role="button"
@@ -115,11 +116,11 @@ const Navbar = () => {
                     />
                   </svg>
                   <span className="badge badge-md indicator-item bg-blue-600 text-white">
-                    0
+                    {cart ? cart.length : "0"}
                   </span>
                 </div>
               </div>
-            </div>
+            </NavLink>
             {user ? (
               <button className="btn" onClick={logout}>
                 Logout

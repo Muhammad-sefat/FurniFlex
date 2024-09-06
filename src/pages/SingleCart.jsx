@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
+import { UserContext } from "../provider/userProvider";
 
 const SingleCart = ({ product }) => {
+  const { addToCart } = useContext(UserContext);
   return (
     <div>
       <div className="card bg-base-100 shadow-xl h-[90%] text-left">
@@ -16,7 +18,10 @@ const SingleCart = ({ product }) => {
           <p className="font-medium my-1">${product.price}</p>
           <p>{product.description}</p>
           <div className="w-full">
-            <button className="btn w-full bg-black text-white">
+            <button
+              onClick={() => addToCart(product)}
+              className="btn btn-neutral w-full"
+            >
               Add to Cart
             </button>
           </div>
