@@ -11,7 +11,7 @@ export const UserProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
-    fetch("/public/data/product.json")
+    fetch("/data/product.json")
       .then((response) => response.json())
       .then((data) => setProducts(data))
       .catch((error) => console.error("Error fetching products:", error));
