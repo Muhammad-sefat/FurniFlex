@@ -76,8 +76,8 @@ export const UserProvider = ({ children }) => {
       if (result.isConfirmed) {
         const updatedCart = cart.filter((item) => item.id !== productId);
         setCart(updatedCart);
-        localStorage.setItem("cart", JSON.stringify(updatedCart));
 
+        localStorage.setItem("cart", JSON.stringify(updatedCart));
         Swal.fire({
           title: "Deleted!",
           text: "The item has been removed from your cart.",
