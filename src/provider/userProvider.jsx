@@ -22,6 +22,15 @@ export const UserProvider = ({ children }) => {
     if (storedUser) setUser(storedUser);
   }, []);
 
+  const signup = ({ firstName, lastName, email, password }, callback) => {
+    const userData = { firstName, lastName, email, password };
+    localStorage.setItem("userData", JSON.stringify(userData));
+    setUser(userData);
+    toast.success("Signup successful!");
+
+    if (callback) callback();
+  };
+
   const login = (userData) => {
     setUser(userData);
     localStorage.setItem("user", JSON.stringify(userData));
@@ -29,7 +38,9 @@ export const UserProvider = ({ children }) => {
 
   const logout = () => {
     setUser(null);
+    setCart([]);
     localStorage.removeItem("user");
+    localStorage.removeItem("cart");
     toast.success("logout success");
   };
 
@@ -109,6 +120,7 @@ export const UserProvider = ({ children }) => {
       value={{
         user,
         login,
+        signup,
         logout,
         products,
         cart,

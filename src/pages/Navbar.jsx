@@ -120,7 +120,7 @@ const Navbar = () => {
                     />
                   </svg>
                   <span className="badge badge-md indicator-item bg-blue-600 text-white">
-                    {cart ? cart.length : "0"}
+                    {user && cart ? cart.length : "0"}
                   </span>
                 </div>
               </div>

@@ -3,9 +3,10 @@ import chair from "../assets/beautifull-chair.jpg";
 import logo from "../assets/furni.png";
 import { Link, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import toast from "react-hot-toast";
+import { UserContext } from "../provider/userProvider";
 
 const Signup = () => {
+  const { signup } = useContext(UserContext);
   const [showPassword, setShowPassword] = useState(false);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -31,20 +32,12 @@ const Signup = () => {
     setLoading(true);
     setErrorMessage("");
 
-    // Save form data to local storage
-    localStorage.setItem(
-      "userData",
-      JSON.stringify({
-        firstName,
-        lastName,
-        email,
-        password,
-      })
-    );
-    setLoading(false);
-    toast.success("Signup successful! Data saved to local storage.");
-    navigate("/");
+    signup({ firstName, lastName, email, password }, () => {
+      setLoading(false);
+      navigate("/");
+    });
   };
+
   return (
     <div className="p-5 md:flex justify-center items-center gap-5 w-full">
       <div className="md:w-[48%] bg-gray-200 flex items-center justify-center p-3 rounded">
