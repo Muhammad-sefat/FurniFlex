@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import chair from "../assets/beautifull-chair.jpg";
 import logo from "../assets/furni.png";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { UserContext } from "../provider/userProvider";
 import toast from "react-hot-toast";
@@ -13,7 +13,9 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [termsAgreed, setTermsAgreed] = useState(false);
+  const location = useLocation();
   const navigate = useNavigate();
+  const from = location.state?.from?.pathname || "/";
 
   const { login } = useContext(UserContext);
 
@@ -37,7 +39,7 @@ const Login = () => {
 
       setLoading(false);
       toast.success("Login Successfull");
-      navigate("/");
+      navigate(from);
     }, 2000);
   };
   return (
