@@ -1,8 +1,14 @@
-# React + Vite
+# FurniFlex
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Overview
+FurniFlex is a dynamic furniture e-commerce platform designed to provide a seamless shopping experience. It features user authentication (login and signup) with local storage to manage user sessions. Once logged in, users can browse products and add items to their cart, which offers a smooth cart management system, including quantity adjustments and real-time updates to the total price.
 
-Currently, two official plugins are available:
+### Key Features
+- User Authentication: Login and signup functionality with user data saved in local storage for persistent sessions.
+- Product Management: Users can browse a range of furniture products and use pagination also user can see product by category.
+- Shopping Cart: Users can add products to the cart, update quantities, and view the total price in real-time.
+- Cart Functionality : User can Add/remove products.Increase/decrease product quantity and Cart items are stored in local storage for persistence.
+- Responsive UI: A user-friendly interface that works across devices
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+#### Live Link : https://furni-flex-psi.vercel.app/
